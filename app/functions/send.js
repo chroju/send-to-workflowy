@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
     'Access-Control-Allow-Methods': 'POST, OPTION',
   };
 
-  const auth_token = event.headers.Authorization;
+  const auth_token = event.headers['authorization'];
   if (auth_token === undefined) {
     console.log('400: Authorization header is not found')
     headers['WWW-Authenticate'] = 'Bearer realm=""';
