@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const now = new Date().toISOString();
+  const now = new Date().toString();
   const { text = '', note = now, priority = 0, ...rest } = JSON.parse(
     event.body
   );
