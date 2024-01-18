@@ -165,6 +165,7 @@ module.exports = class WorkflowyClient {
       this._lastTransactionId =
         body.results[0].new_most_recent_operation_transaction_id;
 
+      console.log(body);
       return { response, body, timestamp };
     } catch (err) {
       console.error(err);
